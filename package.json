@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "commitmsg": "commitlint -e",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
+    "lint": "ionic-app-scripts lint --bailOnLintError true",
+    "precommit": "npm run lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "start": "npm run ionic:serve"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
